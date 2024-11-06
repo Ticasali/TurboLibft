@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 00:49:23 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/06 03:16:08 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 00:53:14 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef	struct	s_list
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 char	**ft_split(char const *s, char c);
-//char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strdup(char const *str);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -44,8 +44,8 @@ void	*ft_memcpy(void *dest, void const *src, size_t n);
 void	*ft_memmove(void *dest, void const *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlen(char const *str);
-//size_t	ft_strlcpy(char *dest, char const *src, size_t size);
-//size_t	ft_strlcat(char *dest, char const *src, size_t size);
+size_t	ft_strlcpy(char *dest, char const *src, size_t size);
+size_t	ft_strlcat(char *dest, char const *src, size_t size);
 int		ft_lstsize(t_list *lst);
 int		ft_atoi(char const *str);
 int		ft_memcmp(void const *s1, void const *s2, size_t n);
