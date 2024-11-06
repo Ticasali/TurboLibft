@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 00:49:23 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/05 15:03:34 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/06 01:48:32 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 #include <string.h>
 #include <ctype.h>
 #include <stddef.h>
+
+typedef	struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 char	*ft_strdup(char const *str);
 char	*ft_strchr(char const *str, int c);
@@ -34,5 +40,6 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+void	bz_zero(void *s, size_t n);
 
 #endif
