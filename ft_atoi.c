@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:02:07 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 03:50:16 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:12:47 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,5 @@ int		ft_atoi(char const *str)
 int		main(int ac, char **av)
 {
 	printf("%d\n", ft_atoi(av[1]));
+	printf("%d\n", atoi(av[1]));
 }
