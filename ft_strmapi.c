@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:02:07 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 03:50:16 by ticasali         ###   ########.fr       */
+/*   Created: 2024/11/07 03:26:50 by ticasali          #+#    #+#             */
+/*   Updated: 2024/11/07 03:40:44 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char const *str)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		ret;
-	int		sign;
-	int		ct;
+	unsigned int		ct;
+	char	*ret;
 
-	sign = 1;
-	ret = 0;
 	ct = 0;
-	while ((str[ct] >= 9 && str[ct] <= 13) || (str[ct] == ' '))
+	while (s[ct])
 		ct++;
-	if (str[ct] == '-' || str[ct] == '+')
-		if (str[ct++] == '-')
-			sign = -1;
-	while (str[ct] >= 47 && str[ct] <= 58)
+	ret = malloc(sizeof(char) * ct + 1);
+	if (ret == NULL)
+		return (NULL);
+	ct = 0;
+	while (s[ct] != '\0')
 	{
-		ret += str[ct] - 48;
-		if (str[++ct] >= 47 && str[ct] <= 58)
-			ret *= 10;
+		ret[ct] = (f)(ct, s[ct]);
+		ct++;
 	}
-	return (ret * sign);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%d\n", ft_atoi(av[1]));
+	ret[ct] = '\0';
+	return (ret);
 }
