@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:25:15 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 17:30:59 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/08 00:11:59 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		(del)(lst[ct]->content);
 		free(lst[ct]);
 	}
+	(void)(cpy);
 	cpy = NULL;
 }

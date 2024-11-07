@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:15:59 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:34:40 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/08 00:16:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void *ft_free_all(char **tab)
 
 	ct = -1;
 	if (tab == NULL)
-		return ;
+		return (NULL);
 	while (tab[++ct])
 		free(tab[ct]);
 	free(tab);

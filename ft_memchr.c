@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:07:57 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/06 02:00:16 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/08 00:36:42 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ void    *ft_memchr(void const *s, int c, size_t n)
 		return (NULL);
 	ret = (const char *)(s);
 	ct = 0;
-	while (ret[ct])
+	while (ret[ct] && ct < n)
 	{
 		if (ret[ct] == c)
-			return (&ret[ct]);
+			return ((void *)&ret[ct]);
 		ct++;
 	}
 	if (c == 0)
-		return (&ret[ct]);
+		return ((void *)&ret[ct]);
 	return (NULL);
 }
