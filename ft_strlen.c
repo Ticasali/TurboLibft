@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 02:29:18 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/05 02:37:05 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:32:06 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,4 @@ size_t	ft_strlen(char const *str)
 	while (str[ret] != '\0')
 		ret++;
 	return (ret);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%d\n", ft_strlen(av[1]));
-	printf("%d\n", strlen(av[1]));
 }

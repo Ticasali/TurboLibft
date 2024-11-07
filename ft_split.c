@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:15:59 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/06 02:45:39 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:34:40 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void ft_free_all(char **tab)
+static void *ft_free_all(char **tab)
 {
 	int		ct;
 
@@ -22,6 +22,7 @@ static void ft_free_all(char **tab)
 	while (tab[++ct])
 		free(tab[ct]);
 	free(tab);
+	return (NULL);
 }
 
 static int	ft_count_words(char const *s, char c)
@@ -93,7 +94,7 @@ char	**ft_split(char const *s, char c)
 		{
 			ret[++ct_tab] = ft_strdup_c(&s[ct], c);
 			if (ret[ct_tab] == NULL)
-				return (ft_free_all(ret), NULL);
+				return (ft_free_all(ret));
 		}
 		while (s[ct] != c && s[ct] != '\0')
 			ct++;

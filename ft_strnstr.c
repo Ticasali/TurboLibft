@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:46:33 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/05 15:00:15 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:31:20 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,4 @@ char	*ft_strnstr(char const *str, char const *find, size_t n)
 		ct++;
 	}
 	return (NULL);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%s\n", ft_strnstr(av[1], av[2], 5));
 }

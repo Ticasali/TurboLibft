@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:06:48 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 00:42:41 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:30:46 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	ret[++ct_ret] = '\0';
 	return (ret);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%s\n", ft_strtrim(av[1], av[2]));
 }

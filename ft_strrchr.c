@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:05:16 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/05 03:17:01 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:30:52 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,4 @@ char	*ft_strrchr(char const *str, int c)
 	if (c == 0)
 		return ((char *)(&str[ct]));
 	return (NULL);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%s\n", ft_strrchr(av[1], av[2][0]));
-	printf("%s\n", strrchr(av[1], av[2][0]));
 }

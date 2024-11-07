@@ -6,7 +6,7 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 02:38:01 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/05 02:46:41 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:32:21 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,4 @@ char	*ft_strdup(char const *str)
 		ret[ct] = str[ct];
 	ret[ct] = '\0';
 	return (ret);
-}
-
-int		main(int ac, char **av)
-{
-	printf("%s\n", strdup(av[1]));
-	printf("%s\n", strdup(av[1]));
 }

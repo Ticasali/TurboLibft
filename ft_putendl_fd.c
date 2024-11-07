@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:13:07 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/06 02:40:03 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:33:20 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t static	ft_countstr(char *str)
+static size_t	ft_countstr(char *str)
 {
 	size_t	ret;
 
