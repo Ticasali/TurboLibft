@@ -6,11 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:01:09 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/08 01:48:10 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/09 19:01:48 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
