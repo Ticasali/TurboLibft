@@ -6,59 +6,67 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:06:48 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:30:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 22:12:40 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static char	*ft_allocate_lenght(char const *s1, char const *set)
+static int	ft_check_char(char c, char const *set)
 {
-	int		ct;
-	int		ct_set;
-	int		val;
-	char	*ret;
-	int		check;
+	size_t	ct;
 
-	ct = -1;
-	val = 0;
-	while (s1[++ct] != '\0')
+	ct = 0;
+	while (set[ct])
 	{
-		ct_set = -1;
-		check = 0;
-		while (set[++ct_set] != '\0')
-			if (set[ct_set] == s1[ct])
-				check++;
-		if (check == 0)
-			val++;
+		if (c == set[ct])
+			return (0);
+		ct++;
 	}
-	ret = malloc(sizeof(char) * val + 1);
+	return (1);
+}
+
+static size_t	ft_allocate_lenght(char const *s1, char const *set)
+{
+	size_t	ct;
+	size_t	ret;
+
+	ct = 0;
+	ret = 0;
+	while (s1[ct] && (ft_check_char(s1[ct], set) == 0))
+		ct++;
+	while (s1[ct])
+	{
+		ct++;
+		ret++;
+	}
+	while (s1[--ct] && (ft_check_char(s1[ct], set) == 0) && ret > 0)
+		ret--;
 	return (ret);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		ct;
-	int		ct_set;
-	int		ct_ret;
+	size_t	ct;
+	size_t	ct_ret;
+	size_t	val;
 	char	*ret;
-	int		check;
 
-	ct = -1;
-	ct_ret = -1;
-	ret = ft_allocate_lenght(s1, set);
+	ct = 0;
+	ct_ret = 0;
+	val = ft_allocate_lenght(s1, set);
+	ret = malloc(sizeof(char) * (val) + 1);
 	if (ret == NULL)
 		return (NULL);
-	while (s1[++ct] != '\0')
+	while (s1[ct] && ft_check_char(s1[ct], set) == 0)
+		ct++;
+	while (s1[ct] && ct_ret < val)
 	{
-		ct_set = -1;
-		check = 0;
-		while (set[++ct_set] != '\0')
-			if (set[ct_set] == s1[ct])
-				check++;
-		if (check == 0)
-			ret[++ct_ret] = s1[ct];
+		ret[ct_ret] = s1[ct];
+		ct++;
+		ct_ret++;
 	}
-	ret[++ct_ret] = '\0';
+	ret[ct_ret] = '\0';
 	return (ret);
 }

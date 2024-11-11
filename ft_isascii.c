@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 01:28:18 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:48:50 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:05:34 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

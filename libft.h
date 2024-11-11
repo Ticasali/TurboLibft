@@ -6,21 +6,16 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 00:49:23 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/09 19:01:30 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:18:52 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT_
-#define	LIBFT_
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <stddef.h>
+# include <stddef.h>
 
-typedef	struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

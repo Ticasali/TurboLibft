@@ -6,17 +6,19 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:02:07 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:49:09 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 22:21:31 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <limits.h>
 
-int		ft_atoi(char const *str)
+int	ft_atoi(char const *str)
 {
-	int		ret;
-	int		sign;
-	int		ct;
+	unsigned long	ret;
+	int				sign;
+	size_t			ct;
 
 	sign = 1;
 	ret = 0;
@@ -26,11 +28,15 @@ int		ft_atoi(char const *str)
 	if (str[ct] == '-' || str[ct] == '+')
 		if (str[ct++] == '-')
 			sign = -1;
-	while (str[ct] >= 47 && str[ct] <= 58)
+	while (str[ct] > 47 && str[ct] < 58)
 	{
 		ret += str[ct] - 48;
-		if (str[++ct] >= 47 && str[ct] <= 58)
+		if ((str[++ct] > 47 && str[ct] < 58))
 			ret *= 10;
 	}
-	return (ret * sign);
+	if (((LLONG_MAX) < ret) && sign == 1)
+		return (-1);
+	if (((LLONG_MAX) < ret) && sign == -1)
+		return (0);
+	return ((int)(ret * sign));
 }

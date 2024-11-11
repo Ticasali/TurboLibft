@@ -6,26 +6,25 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:11:06 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/06 02:14:39 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 20:56:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	ct;
-	char	*ret;
+	size_t			ct;
+	unsigned char	*ret;
+	unsigned char	cast;
 
-	if (s == NULL)
-		return (NULL);
-	if (c < -127 || c > 127)
-		return (s);
 	ct = 0;
-	ret = (char *)(s);
+	ret = (unsigned char *)(s);
+	cast = (unsigned char)(c);
 	while (ct < n)
 	{
-		ret[ct] = c;
+		ret[ct] = cast;
 		ct++;
 	}
 	return ((void *)(ret));

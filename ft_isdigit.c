@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 01:19:15 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:48:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:05:39 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

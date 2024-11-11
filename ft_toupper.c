@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 02:48:46 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:25:45 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:06:05 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c -= 32;

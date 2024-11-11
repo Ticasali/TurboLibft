@@ -6,30 +6,34 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:15:59 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/08 00:16:34 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 22:16:30 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static void *ft_free_all(char **tab)
+static void	*ft_free_all(char **tab)
 {
-	int		ct;
+	size_t	ct;
 
-	ct = -1;
+	ct = 0;
 	if (tab == NULL)
 		return (NULL);
-	while (tab[++ct])
+	while (tab[ct])
+	{
 		free(tab[ct]);
+		ct++;
+	}
 	free(tab);
 	return (NULL);
 }
 
-static int	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
-	int		ret;
-	int		ct;
-	int		check;
+	size_t	ret;
+	size_t	ct;
+	size_t	check;
 
 	ct = 0;
 	ret = 0;
@@ -56,7 +60,7 @@ static int	ft_count_words(char const *s, char c)
 
 static char	*ft_strdup_c(char const *s, char c)
 {
-	int		ct;
+	size_t	ct;
 	char	*ret;
 
 	ct = 0;
@@ -78,27 +82,28 @@ static char	*ft_strdup_c(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
-	int		ct;
-	int		ct_tab;
+	size_t	ct;
+	size_t	ct_tab;
 
 	ret = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (ret == NULL)
 		return (NULL);
 	ct = 0;
-	ct_tab = -1;
+	ct_tab = 0;
 	while (s[ct] != '\0')
 	{
 		while (s[ct] == c)
 			ct++;
 		if (s[ct] != '\0')
 		{
-			ret[++ct_tab] = ft_strdup_c(&s[ct], c);
+			ret[ct_tab] = ft_strdup_c(&s[ct], c);
 			if (ret[ct_tab] == NULL)
 				return (ft_free_all(ret));
+			ct_tab++;
 		}
 		while (s[ct] != c && s[ct] != '\0')
 			ct++;
 	}
-	ret[ct_tab + 1] = NULL;
+	ret[ct_tab] = NULL;
 	return (ret);
 }

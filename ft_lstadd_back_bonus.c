@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:01:09 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/09 19:01:48 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 20:52:16 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

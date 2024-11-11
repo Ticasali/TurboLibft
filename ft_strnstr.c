@@ -6,11 +6,12 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:46:33 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/07 23:31:20 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:22:27 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strnstr(char const *str, char const *find, size_t n)
 {
@@ -20,16 +21,17 @@ char	*ft_strnstr(char const *str, char const *find, size_t n)
 
 	ct = 0;
 	len = 0;
-	if (len > n)
-		len = n;
+	if (find[0] == '\0')
+		return ((char *)(str));
 	while (find[len] != '\0')
 		len++;
-	while (str[ct] != '\0')
+	while (str[ct] != '\0' && ct <= n)
 	{
 		if (str[ct] == find[0])
 		{
 			ct_l = 0;
-			while (str[ct + ct_l] == find[ct_l] && ct_l < n && str[ct + ct_l] != '\0' && find[ct_l] != '\0')
+			while ((str[ct + ct_l] == find[ct_l] && (ct + ct_l < n))
+				&& (str[ct + ct_l] != '\0' && find[ct_l] != '\0'))
 				ct_l++;
 			if (ct_l == len)
 				return ((char *)(&str[ct]));

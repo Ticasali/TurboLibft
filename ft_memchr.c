@@ -6,30 +6,31 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:07:57 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/08 00:36:42 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:14:53 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void    *ft_memchr(void const *s, int c, size_t n)
+void	*ft_memchr(void const *s, int c, size_t n)
 {
-	size_t	ct;
-	char const	*ret;
+	size_t				ct;
+	unsigned const char	*ret;
+	unsigned char		cast;
 
-	if (s == NULL)
+	if (n == 0)
 		return (NULL);
-	if (c < -127 || c > 127)
-		return (NULL);
-	ret = (const char *)(s);
+	cast = (unsigned char)(c);
+	ret = (unsigned const char *)(s);
 	ct = 0;
-	while (ret[ct] && ct < n)
+	while (ct < n)
 	{
-		if (ret[ct] == c)
+		if (ret[ct] == cast)
 			return ((void *)&ret[ct]);
 		ct++;
 	}
-	if (c == 0)
+	if (cast == 0 && ret[ct] == cast)
 		return ((void *)&ret[ct]);
 	return (NULL);
 }
