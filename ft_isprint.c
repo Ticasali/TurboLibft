@@ -6,11 +6,9 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 01:35:43 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 21:05:46 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:12:54 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

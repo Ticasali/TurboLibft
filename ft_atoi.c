@@ -6,12 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:02:07 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 22:21:31 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:31:39 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 #include <limits.h>
 
 int	ft_atoi(char const *str)

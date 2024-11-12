@@ -6,11 +6,9 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 02:48:46 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 21:06:05 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:27:31 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

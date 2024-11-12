@@ -6,12 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:05:16 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 21:15:17 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:39:33 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strrchr(char const *str, int c)
 {

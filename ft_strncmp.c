@@ -6,12 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 03:17:39 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 21:17:43 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:39:23 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_strncmp(char const *s1, char const *s2, size_t n)
 {

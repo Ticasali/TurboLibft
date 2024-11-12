@@ -6,12 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:09:11 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 21:13:48 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:38:05 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_memcpy(void *dest, void const *src, size_t n)
 {

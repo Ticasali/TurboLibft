@@ -6,13 +6,13 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 00:00:03 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 22:11:22 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:30:24 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 #include <limits.h>
+#include <stdlib.h>
 
 static char	*ft_revstr(char *ret)
 {
@@ -58,47 +58,28 @@ static size_t	ft_allocated_value(int n)
 	return (ret + 1);
 }
 
-static char	*ft_int_min(char *ret, int n)
-{
-	size_t	ct;
-
-	ct = 0;
-	n++;
-	n *= -1;
-	ret[ct++] = '-';
-	while (n >= 10)
-	{
-		ret[ct++] = (n % 10) + 48;
-		n /= 10;
-	}
-	ret[ct] = n + 48;
-	ret[1] = '8';
-	ret[ct + 1] = '\0';
-	return (ft_revstr(ret));
-}
-
 char	*ft_itoa(int n)
 {
 	char	*ret;
 	size_t	ct;
+	long	cast;
 
 	ct = 0;
+	cast = (long)(n);
 	ret = malloc(sizeof(char) * ft_allocated_value(n) + 1);
 	if (ret == NULL)
 		return (NULL);
-	if (n == INT_MIN)
-		return (ft_int_min(ret, n));
-	if (n < 0)
+	if (cast < 0)
 	{
-		n *= -1;
+		cast *= -1;
 		ret[ct++] = '-';
 	}
-	while (n >= 10)
+	while (cast >= 10)
 	{
-		ret[ct++] = (n % 10) + 48;
-		n /= 10;
+		ret[ct++] = (cast % 10) + 48;
+		cast /= 10;
 	}
-	ret[ct] = n + 48;
+	ret[ct] = cast + 48;
 	ret[ct + 1] = '\0';
 	return (ft_revstr(ret));
 }

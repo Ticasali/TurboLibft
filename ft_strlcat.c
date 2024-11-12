@@ -6,12 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 00:53:05 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/11 22:12:05 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:39:05 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	ft_u_len(char const *str)
 {
