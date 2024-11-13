@@ -6,7 +6,7 @@
 #    By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/09 20:05:08 by ticasali          #+#    #+#              #
-#    Updated: 2024/11/11 22:32:50 by ticasali         ###   ########.fr        #
+#    Updated: 2024/11/13 13:26:36 by ticasali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ OBJS = $(addprefix $(OBJDIR)/,$(SRCS:.c=.o))
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Werror -Wextra -Wall
 AR = ar -rcs
 
