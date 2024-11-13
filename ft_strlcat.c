@@ -6,21 +6,11 @@
 /*   By: ticasali <ticasali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 00:53:05 by ticasali          #+#    #+#             */
-/*   Updated: 2024/11/13 13:40:16 by ticasali         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:47:42 by ticasali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_u_len(char const *str)
-{
-	size_t	cmp;
-
-	cmp = 0;
-	while (str[cmp] != '\0')
-		cmp++;
-	return (cmp);
-}
 
 size_t	ft_strlcat(char *dest, char const *src, size_t size)
 {
@@ -30,8 +20,8 @@ size_t	ft_strlcat(char *dest, char const *src, size_t size)
 	size_t	lensrc;
 
 	cmp_s = 0;
-	cmp_d = ft_u_len(dest);
-	lensrc = ft_u_len(src);
+	cmp_d = ft_strlen(dest);
+	lensrc = ft_strlen(src);
 	if (size <= cmp_d)
 		return (lensrc + size);
 	ret = cmp_d;
